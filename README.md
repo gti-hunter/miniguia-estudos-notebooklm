@@ -1,89 +1,55 @@
-📑 Miniguia de Estudos: Análise de Dados e Inteligência Preditiva com NotebookLM
-1. Contexto e Objetivos
-Contexto
-No cenário corporativo e educacional contemporâneo, dados isolados são apenas ruído. A verdadeira vantagem competitiva surge da habilidade de transformar registros brutos em inteligência acionável. Este projeto foi desenvolvido para consolidar o conhecimento em Análise de Dados, explorando desde a fundação estrutural (SQL e pipelines ETL) até a modelagem preditiva e a aplicação de Inteligência Artificial para antecipar comportamentos de mercado, como evasão de clientes e padrões de inadimplência.
+# Miniguia de Estudos com NotebookLM — Análise de Dados e Inteligência Preditiva
 
-Objetivos de Estudo
-Dominar o Pipeline de Dados: Compreender o fluxo completo de extração, transformação e carregamento (ETL) de dados provenientes de bancos relacionais.
+## Contexto e Objetivos
 
-Explorar Análise Preditiva: Desenvolver o pensamento crítico necessário para extrair padrões históricos e criar modelos capazes de prever comportamentos futuros.
+**Assunto escolhido:** Consolidação do conhecimento em Análise de Dados, explorando desde pipelines ETL (extração, transformação e carregamento) até a modelagem preditiva com IA para antecipar comportamentos de mercado, como evasão e inadimplência.
 
-Dominar IA como Assistente de Aprendizagem: Utilizar o NotebookLM para centralizar fontes confiáveis, refinando a habilidade de Engenharia de Prompts para extrair insights técnicos complexos.
+**Objetivos de estudo:**
 
-2. Curadoria de Fontes (Sources Confiáveis)
-Para alimentar este NotebookLM com o que há de mais sólido na área, foram selecionadas as seguintes fontes abertas, científicas e documentais:
+* Dominar o fluxo de extração, transformação e carregamento (ETL) de dados provenientes de bancos relacionais
+* Desenvolver o pensamento crítico necessário para extrair padrões históricos e criar modelos de previsão
+* Compreender o uso do NotebookLM como assistente centralizador de fontes documentais confiáveis
+* Refinar a habilidade de Engenharia de Prompts para extrair insights técnicos complexos 
+* Construir uma base sólida para aplicar análise exploratória de dados (EDA) em cenários reais
 
-"Python Data Science Handbook" (Jake VanderPlas): Livro de referência open-source que cobre as bibliotecas fundamentais para manipulação e análise de dados (NumPy, Pandas, Matplotlib e Scikit-Learn).
+## Curadoria de Fontes
 
-Acesso: Repositório público do autor / Versão web gratuita.
+* **"Python Data Science Handbook" (Jake VanderPlas):** Livro de referência open-source focado em manipulação e análise de dados (NumPy, Pandas, Scikit-Learn).
+* **"Introduction to Statistical Learning" (ISLR):** Referência acadêmica aberta sobre aprendizado de máquina e modelagem estatística preditiva (Stanford University).
+* **Documentação Oficial do Pandas & SQL Analytics:** Guias práticos sobre manipulação de DataFrames e funções de janela (Window Functions) em SQL.
+* **Artigos de Case Studies de Retenção e Churn (HBR / Kaggle):** Documentos detalhando métricas como LTV, Churn Rate e análise de comportamento de pagamento.
 
-"Introduction to Statistical Learning" (ISLR - James, Witten, Hastie, Tibshirani): A bíblia acadêmica aberta sobre aprendizado de máquina e modelagem estatística preditiva.
+## Engenharia de Prompts e "Cicatrizes"
 
-Acesso: PDF gratuito disponibilizado oficialmente pelos autores no site da Stanford University.
+**Prompt Inicial (Iniciante):**
+> "Me explica como fazer análise de dados para evitar evasão."
+* **Resultado:** Resposta genérica focada em pesquisas de satisfação, sem profundidade técnica.
+* **Dificuldade (Cicatriz):** Ausência de contexto de negócio, papel da IA não definido e falta de restrições técnicas no prompt.
 
-Documentação Oficial do Pandas & SQL Analytics: Guias práticos sobre manipulação de DataFrames de alta performance e funções de janela (Window Functions) em bancos de dados relacionais.
+**Prompt Avançado (Refinado):**
+> "Atue como um Cientista de Dados Sênior especializado em Retenção de Clientes. Com base nos documentos fornecidos sobre modelagem preditiva, estruture um plano de análise exploratória de dados (EDA) para identificar padrões de comportamento que antecedem o Churn. Considere: frequência de acesso e atraso histórico. Retorne dividido em: 1. Engenharia de Atributos, 2. Métricas de Avaliação e 3. Ações."
+* **Resultado:** Roteiro técnico sugerindo a criação da feature "Janela de Recência de Atrasos" e uso de métricas estatísticas robustas como *Recall*.
 
-Artigos de Case Studies de Retenção e Churn (Harvard Business Review / Kaggle): Documentos de domínio público detalhando métricas de negócios como LTV (Lifetime Value), Churn Rate (Taxa de Evasão) e análise de comportamento de pagamento.
+**Troubleshooting no NotebookLM:**
+* **Problema:** A IA gerou consultas SQL misturando dialetos (PostgreSQL com MySQL) ao cruzar dados de pagamentos.
+* **Solução:** Upload de um arquivo `.txt` complementar com a especificação do dialeto correto e ajuste no prompt: *"Utilizando estritamente a sintaxe da Fonte X, escreva a query..."*.
 
-3. Engenharia de Prompts e "Cicatrizes" (Troubleshooting)
-Documentação do processo de refinamento das interações com a IA dentro do NotebookLM para obter respostas de nível sênior.
+## Miniguia de Estudo (Entrega Final)
 
-🔄 Evolução dos Prompts
-Prompt Inicial (Iniciante - Baixo Retorno):
-
-"Me explica como fazer análise de dados para evitar que alunos saiam da escola."
-
-Resultado da IA: Uma resposta genérica sugerindo "fazer pesquisas de satisfação" e "melhorar as aulas", sem profundidade técnica ou analítica.
-
-A "Cicatriz" (Dificuldade): Falta de contexto, falta de papel definido para a IA e ausência de restrições técnicas.
-
-Prompt Avançado (Engenharia de Prompt Eficaz):
-
-"Atue como um Cientista de Dados Sênior especializado em People Analytics e Retenção de Clientes. Com base nos documentos fornecidos sobre modelagem preditiva e análise de séries temporais, estruture um plano de análise exploratória de dados (EDA) para identificar padrões de comportamento que antecedem o Churn (evasão). Considere variáveis como: frequência de acesso, atraso histórico no pagamento de mensalidades e interações no sistema. Retorne a resposta dividida em: 1. Engenharia de Atributos (Features), 2. Métricas de Avaliação do Modelo e 3. Ações Baseadas em Alertas."
-
-Resultado da IA: Um roteiro técnico impecável, sugerindo a criação de uma feature de "Janela de Recência de Atrasos", uso de métricas como Recall (essencial para falsos negativos em evasão) e automações de gatilhos via CRM/WhatsApp.
-
-🛠️ Troubleshooting (Resolução de Problemas no NotebookLM)
-Desafio Encontrado: Ao perguntar sobre consultas SQL específicas para cruzar dados de pagamentos, a IA gerou sintaxes que utilizavam funções indisponíveis no dialeto do banco de dados específico utilizado no projeto prático (ex: misturando PostgreSQL com funções exclusivas do MySQL).
-
-Solução: Foi feito o upload de um arquivo de texto complementar contendo a especificação do dialeto SQL correto (restrições de sintaxe). O prompt foi ajustado para: "Utilizando estritamente as limitações de sintaxe do dialeto contido na Fonte X, escreva a query para...". O resultado foi corrigido com sucesso.
-
-4. Miniguia de Estudo (Entrega Final)
-📈 Resumos Estruturados do Assunto
-O Fluxo da Análise Descritiva à Preditiva
+### Resumos Estruturados
 A análise de dados madura divide-se em camadas evolutivas:
+* **Análise Descritiva:** O que aconteceu? (Dashboards, faturamento, inadimplência atual).
+* **Análise Diagnóstica:** Por que aconteceu? (Mineração de dados e correlações, ex: clientes com X dias de atraso têm Y% de chance de evasão).
+* **Análise Preditiva:** O que vai acontecer? (Modelos de Machine Learning atribuindo "Scores de Risco" diários para antecipar ações).
 
-Análise Descritiva (O que aconteceu?): Dashboards em ferramentas de BI que consolidam o faturamento, a inadimplência atual e a taxa de evasão do mês anterior.
+### Glossário
+* **Churn Rate:** Taxa de rotatividade ou evasão de clientes em um determinado período.
+* **Feature Engineering:** Processo de transformar dados brutos em variáveis mais informativas para um modelo preditivo.
+* **Overfitting:** Quando o modelo "decora" os dados históricos e falha ao prever novos cenários.
+* **ETL (Extract, Transform, Load):** Processo de extração, limpeza, padronização e carregamento de dados em um repositório centralizado.
+* **Data Wrangling:** Processo de limpar, estruturar e enriquecer dados brutos para análise.
 
-Análise Diagnóstica (Por que aconteceu?): Mineração de dados e correlações para entender que clientes que atrasam o pagamento em mais de 15 dias possuem 70% mais chance de cancelar o contrato nos próximos 3 meses.
-
-Análise Preditiva (O que vai acontecer?): Modelos de Machine Learning (como Regressão Logística ou Árvores de Decisão) rodando em scripts Python que analisam os dados diariamente e atribuem um "Score de Risco" para cada registro.
-
-O Pipeline de Dados Eficiente
-Para que a IA ou o analista trabalhem bem, os dados precisam passar por um tratamento rigoroso (Data Wrangling), eliminando valores nulos, tratando outliers (valores discrepantes que distorcem as médias) e padronizando formatos de data e hora para análises temporais.
-
-🧠 Glossário de Conceitos Aprendidos
-Churn Rate: Taxa de rotatividade ou evasão de clientes/alunos em um determinado período.
-
-Feature Engineering (Engenharia de Atributos): O processo de transformar dados brutos em variáveis mais informativas para um modelo preditivo (ex: transformar datas de pagamento isoladas em uma métrica de "Média de Dias de Atraso").
-
-Overfitting (Sobreajuste): Erro clássico em Machine Learning onde o modelo decora os dados históricos em vez de aprender o padrão geral, tornando-se incapaz de prever novos cenários do mundo real com precisão.
-
-ETL (Extract, Transform, Load): Processo de extração de dados de fontes diversas, transformação (limpeza e padronização) e carregamento em um repositório centralizado para análise.
-
-Data Wrangling: O processo manual e automatizado de limpar, estruturar e enriquecer dados brutos para torná-los prontos para visualização ou modelagem.
-
-📝 Prompts Reutilizáveis para Revisões Futuras
-Guarde estes prompts no seu NotebookLM para acelerar estudos futuros ou aplicar em novos conjuntos de dados:
-
-Para Resumos Executivos de Fontes Complexas:
-
-"Com base no documento anexado sobre [Inserir Tema], extraia os 5 principais insights práticos aplicáveis a pequenos e médios negócios, explicando o impacto financeiro de cada um de forma simplificada."
-
-Para Identificação de Anomalias e Padrões de Inadimplência:
-
-"Atue como um analista financeiro focado em mitigação de riscos. Diante dos conceitos de análise diagnóstica, quais comportamentos transacionais de um cliente indicam, com maior relevância estatística, que ele se tornará um pagador estritamente atrasado? Estruture em uma tabela comparativa de sinais de alerta imediatos vs. tardios."
-
-Para Arquitetura de Pipeline de Dados:
-
-"Estou desenhando um fluxo de integração onde preciso extrair dados de um banco relacional, tratá-los no Python e exibir em um painel. Proponha uma arquitetura de pipeline de dados limpa, listando quais bibliotecas Python utilizar para cada etapa (extração, limpeza, modelagem) e justifique a escolha."
+### Prompts Reutilizáveis
+* **Para Resumos Executivos:** *"Com base no documento anexado, extraia os 5 principais insights práticos aplicáveis a negócios, explicando o impacto financeiro de cada um de forma simplificada."*
+* **Para Identificação de Anomalias:** *"Atue como analista financeiro. Quais comportamentos transacionais indicam, com maior relevância, que um cliente se tornará um pagador atrasado? Estruture em uma tabela comparativa."*
+* **Para Arquitetura de Dados:** *"Proponha uma arquitetura de pipeline de dados limpa para extrair dados relacionais, tratá-los em Python e exibir em um painel, listando as bibliotecas sugeridas para cada etapa."*
