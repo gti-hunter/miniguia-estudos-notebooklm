@@ -1,5 +1,10 @@
 # Miniguia de Estudos com NotebookLM — Análise de Dados e Inteligência Preditiva
 
+**[🔗 Acesse meu Perfil Dio clicando aqui](https://web.dio.me/users/professorrogerio_gti)**
+
+<img width="1898" height="885" alt="image" src="https://github.com/user-attachments/assets/658cedcb-a4e0-406f-85af-56c7470b09dc" />
+
+
 ## Contexto e Objetivos
 
 **Assunto escolhido:** Consolidação do conhecimento em Análise de Dados, explorando desde pipelines ETL (extração, transformação e carregamento) até a modelagem preditiva com IA para antecipar comportamentos de mercado, como evasão e inadimplência.
